@@ -1,0 +1,129 @@
+body{
+    background: silver;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    position: relative;
+    top: -19px;
+    background-image: linear-gradient(to bottom, #5de0e6, #004aad);
+    margin: 0;
+    border: 100px;
+    height: 220px;
+    
+   
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -25%;
+    margin: 10px;
+    left: 0;
+    
+    
+}
+
+.buscar-bar {
+    position: absolute;
+    top: 30%;
+    right: 35%;
+} 
+
+.buscar-bar input {
+    width: 400px;
+    height: 30px;
+}
+
+@keyframes mover {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.anuncio h2 {
+    color: white;
+    position: absolute;
+    top: -5%;
+    right: 37%;
+    animation: mover 1s infinite;
+}
+
+.perfil {
+    position: absolute;
+    top: 0,5%;
+    right: 0;
+    margin: 10px;
+    font-size: 25px;
+}
+
+.perfil a {
+
+    text-decoration: none;
+    color: white;
+}
+
+.categoria-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #cdffd8, #94b9ff);
+    padding: 0px 0; 
+    box-shadow: 5px 5px 15px #c7c7c7, -5px -5px 15px #ffffff;
+    border-radius: 15px;
+}
+
+.categoria-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.categoria-bar li {
+
+    display: inline-block;
+    margin-right: 10px;
+    height: 50px;
+}
+
+.categoria-bar li a {
+
+    color: transparent;
+    text-decoration: none;
+    padding: 10px 20px;
+    left: 200%;
+    position: relative;
+    margin: 15px;
+    top: 25%;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    background-image: linear-gradient(to right, red, #1d28c4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    cursor: pointer;
+}
+
+.categoria-bar li a:active {
+    box-shadow: inset 3px 3px 10px #000000, inset -3px -3px 10px #020202; 
+    transform: translateY(1px);
+  }
+
+.categoria-bar li a:hover {
+
+    background-image: linear-gradient(to right, #ff5454, #ff9754);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 10px #c7c7c7, -3px -3px 10px #ffffff;
+    border-radius: 10px;
+    
+    
+}
+
+
+
