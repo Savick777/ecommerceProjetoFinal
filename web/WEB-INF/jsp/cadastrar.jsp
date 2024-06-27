@@ -1,9 +1,3 @@
-<%-- 
-    Document   : cadastrar
-    Created on : 20/04/2024, 15:42:15
-    Author     : ariel
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +7,8 @@
         <link rel="stylesheet" href="./css/cadastro.css">
     </head>
     <body>
+
+        <img class="img-fundo" src="./imagens/fundoLogin.png" alt="">
         <div class="cadastro-container">
         <h2>Cadastro de Usuário</h2>
         <form action="cadastrar" method="post">

@@ -17,8 +17,16 @@
         <servlet-class>controller.UsuarioController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ProdutoController</servlet-name>
+        <servlet-name>ProdutosController</servlet-name>
         <servlet-class>controller.ProdutosController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CarrinhoController</servlet-name>
+        <servlet-class>controller.CarrinhoController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CarrinhosController</servlet-name>
+        <servlet-class>controller.CarrinhosController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
@@ -27,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>UsuarioController</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/telaAdm</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UsuarioController</servlet-name>
@@ -42,19 +54,48 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/pedidoFinalizado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ProdutoController</servlet-name>
+        <servlet-name>ProdutosController</servlet-name>
         <url-pattern>/ProdutoController</url-pattern>
     </servlet-mapping>
-    
     <servlet-mapping>
-        <servlet-name>ProdutoController</servlet-name>
-        <url-pattern>/cadastrarProdutos</url-pattern>
+        <servlet-name>ProdutosController</servlet-name>
+        <url-pattern>/footer</url-pattern>
     </servlet-mapping>
-    
-   
+    <servlet-mapping>
+        <servlet-name>ProdutosController</servlet-name>
+        <url-pattern>/cadastrarProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutosController</servlet-name>
+        <url-pattern>/produtos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutosController</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutosController</servlet-name>
+        <url-pattern>/compra</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutosController</servlet-name>
+        <url-pattern>/buscar-produtos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CarrinhosController</servlet-name>
+        <url-pattern>/carrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CarrinhosController</servlet-name>
+        <url-pattern>/CarrinhosController</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

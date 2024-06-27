@@ -1,17 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controller;
 
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
+import model.bean.Categorias;
 import model.bean.Usuario;
+import model.dao.CategoriasDAO;
 import model.dao.UsuarioDAO;
 
 public class UsuarioController extends HttpServlet {
@@ -26,6 +25,11 @@ public class UsuarioController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        CategoriasDAO categoriasDAO = new CategoriasDAO();
+        
+        
+        List<Categorias> categorias = categoriasDAO.listarCategorias();
+        request.setAttribute("categorias", categorias);
         String url = request.getServletPath();
         if (url.equals("/login")) {
             processRequest(request, response);
@@ -42,6 +46,14 @@ public class UsuarioController extends HttpServlet {
             String nextPage = "/WEB-INF/jsp/home.jsp";
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
             dispatcher.forward(request, response);
+        }else if (url.equals("/pedidoFinalizado")) {
+            String nextPage = "/WEB-INF/jsp/pedidoFinalizado.jsp";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
+        }else if (url.equals("/telaAdm")) {
+            String nextPage = "/WEB-INF/jsp/telaAdm.jsp";
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextPage);
+            dispatcher.forward(request, response);
         }
     }
 
@@ -49,7 +61,7 @@ public class UsuarioController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        System.out.println("Chamada ao método doPost do UsuarioController");
+        
         String url = request.getServletPath();
         if (url.equals("/login")) {
             String usuario = request.getParameter("usuario");
@@ -60,15 +72,14 @@ public class UsuarioController extends HttpServlet {
 
             if (usuarioValido.getId_usuario() != 0){
                 
-                if (usuarioValido.getId_usuario() == 2) {
-                    response.sendRedirect("./cadastrar");
+                if (usuarioValido.getId_usuario() == 1) {
+                    response.sendRedirect("./telaAdm");
+                    return;
                 }
-                // Usuário válido, redirecionar para página de perfil ou outra página
-                // Aqui você pode configurar o redirecionamento conforme necessário
                 
                 response.sendRedirect("./home");
+                return;
             } else {
-                // Usuário inválido, redirecionar de volta para a página de login com uma mensagem de erro
                 
                 request.setAttribute("mensagem", "Usuário ou senha inválidos.");
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/WEB-INF/jsp/login.jsp");
@@ -87,7 +98,6 @@ public class UsuarioController extends HttpServlet {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             usuarioDAO.inserirUsuario(newUser);
 
-            // Redirecionar para a página de login após o cadastro
             response.sendRedirect("./login");
         }
         

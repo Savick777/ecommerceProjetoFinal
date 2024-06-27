@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model.dao;
 
 import conexao.Conexao;
@@ -13,10 +9,8 @@ import java.sql.SQLException;
 import model.bean.Usuario;
 
 public class UsuarioDAO {
-    
-    // Método para validar usuário por login e senha
-    public Usuario validarUsuario(String usuario, String senha) {
-        Usuario usuarioValido = null;
+     public Usuario validarUsuario(String usuario, String senha) {
+        Usuario usuarioValido = new Usuario();
         try {
             Connection con = Conexao.conectar();
             PreparedStatement stmt = con.prepareStatement("SELECT * FROM usuarios WHERE usuario = ? AND senha = ?");
@@ -24,7 +18,6 @@ public class UsuarioDAO {
             stmt.setString(2, senha);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                usuarioValido = new Usuario();
                 usuarioValido.setId_usuario(rs.getInt("id_usuario"));
                 usuarioValido.setNome(rs.getString("nome"));
                 usuarioValido.setUsuario(rs.getString("usuario"));
@@ -33,7 +26,7 @@ public class UsuarioDAO {
                 usuarioValido.setTelefone(rs.getString("telefone"));
                 usuarioValido.setData_nascimento(rs.getString("data_nascimento"));
                 usuarioValido.setTipo_usuario(rs.getString("tipo_usuario"));
-            }
+        } 
             rs.close();
             stmt.close();
             con.close();
@@ -43,8 +36,7 @@ public class UsuarioDAO {
         return usuarioValido;
     }
     
-    // Método para inserir um novo usuário
-    public void inserirUsuario(Usuario usuario) {
+     public void inserirUsuario(Usuario usuario) {
         try {
             Connection con = Conexao.conectar();
             PreparedStatement stmt = con.prepareStatement("INSERT INTO usuarios (nome, usuario, senha, cpf, telefone, data_nascimento) VALUES (?, ?, ?, ?, ?, ?)");
@@ -62,8 +54,7 @@ public class UsuarioDAO {
         }
     }
     
-    // Método para atualizar os dados de um usuário
-    public void atualizarUsuario(Usuario usuario) {
+     public void atualizarUsuario(Usuario usuario) {
         try {
             Connection con = Conexao.conectar();
             PreparedStatement stmt = con.prepareStatement("UPDATE usuarios SET nome = ?, usuario = ?, senha = ?, cpf = ?, telefone = ?, data_nascimento = ?, tipo_usuario = ? WHERE id_usuario = ?");
@@ -83,8 +74,7 @@ public class UsuarioDAO {
         }
     }
     
-    // Método para excluir um usuário
-    public void excluirUsuario(int idUsuario) {
+     public void excluirUsuario(int idUsuario) {
         try {
             Connection con = Conexao.conectar();
             PreparedStatement stmt = con.prepareStatement("DELETE FROM usuarios WHERE id_usuario = ?");

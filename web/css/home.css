@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "LXGW WenKai TC", cursive;
+    
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.main-container {
+    background-color: #534e4e;
+    padding: 0;
+    max-width: 100%;
+    max-height: auto;
+    flex: 1;
+}
+
+.slide-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 1500px;
+    height: 400px;
+}
+
+.anterior, .proximo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(253, 253, 253);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.proximo {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.anterior:hover, .proximo:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.cards-produtos {
+    background-color: #ffffff;
+}
+
+.cards-produtos img {
+    width: 250px;
+    height: 250px;
+}
+
+.card-1 {
+    width: 300px; 
+    height: auto;
+    border: 1px solid #c7c3c3;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.card-1 p {
+    word-wrap: break-word; 
+}
+
+.card-1 a {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(140, 233, 0);
+    color: inherit;
+
+}
+
+.card-1 a:hover {
+    background-color: green;
+    
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
+
+
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    padding: 5px; 
+    box-sizing: border-box; 
+    gap: 35px;
+}
+
+.cards-produtos .promo-arraia {
+    width: 1500px;
+    height: 200px;
+}
+
+

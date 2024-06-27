@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
+
+    <img class="img-fundo" src="./imagens/fundoLogin.png" alt="">
     <div class="container">
         <h2>Login</h2>
-        <form action="/login" id="formulario" method="post">
+        <form action="login" id="formulario" method="post">
             <input type="text" id="usuario" name="usuario" placeholder="Usuário" required>
             <input type="password" id="senha" name="senha" placeholder="Senha" required>
             <button type="submit">Entrar</button>
@@ -19,5 +21,4 @@
         <p>Não tem uma conta? <a href="./cadastrar">Cadastre-se</a></p>
     </div>
 </body>
-<script src="./js/login.js"></script>
 </html>

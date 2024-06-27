@@ -1,55 +1,27 @@
-footer {
-    
-    background-image: linear-gradient(#8c52ff, #5ce1e6);
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    max-width: 100%;  
-    height: 215px;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-
+.content {
+    flex: 1;
+}
 
 .footer-container {
-    position: relative;
-    bottom: 0;
-    max-width: 100%;
-}
-
-.atendimento-container {
-
+    background-color: black;
+    height: 100px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-shrink: 0;
+    color: white;
     
-    
-    float: right;
-    width: 400px; 
-    text-align: justify;
-    line-height: 1.0;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-
-.atendimento-container h4 {
-    font-weight: bold;
-    line-height: 0,5;
-    
-}
-
-.atendimento-container p {
-
-    text-align: justify;
-    margin: 0 0 10px;
-   
-
-}
-
-.redes-sociais-container {
-    text-align: center; 
-}
-
-.redes-sociais-container h4 {
-    margin-bottom: 10px; 
 }
 
 .redes-sociais-container ul {
@@ -61,23 +33,21 @@ footer {
 .redes-sociais-container ul li {
     display: inline;
     margin-right: 20px;
-    
+    color: white;
 }
 
 .redes-sociais-container a {
-
     width: 100px;
     height: 100px;
 }
 
-.icon {
-    font-size: 35px; 
-}
-
-.icon1 {
+.redes-sociais {
     font-size: 32px;
 }
 
-
-
-
+.insta, .face, .wpp {
+    color: white;
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+}

@@ -1,0 +1,76 @@
+ body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .payment-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+        .payment-form h1 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        .payment-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        .payment-form input[type="text"], .payment-form input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .payment-form .radio-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .payment-form .radio-group label {
+            display: inline-block;
+            margin-right: 10px;
+            color: #333;
+        }
+        .payment-form .radio-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        .payment-form .pix-info {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        .payment-form .card-info {
+            display: none;
+        }
+        .payment-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .payment-form button:hover {
+            background-color: #218838;
+        }

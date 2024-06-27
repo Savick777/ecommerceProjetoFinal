@@ -1,32 +1,48 @@
 body {
-            background: linear-gradient(to bottom, #5de0e6, #004aad, white, black);
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        form {
-            width: 50%;
-            margin: 0 auto;
-        }
-        input[type="text"], input[type="number"], textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #5de0e6;
-            color: black;
-            border: none;
-            padding: 15px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        input[type="submit"]:hover {
-            background-color: #004aad;
-            color: white;
-        }
+    background-color: #000000;
+}
+
+.container {
+    margin-top: 200px; 
+    background-image: linear-gradient(white, #FFD700);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 50%; 
+    margin: 0 auto; 
+    
+}
+
+.container h2 {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: black;
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto; 
+}
+
+.btn-primary:hover {
+    background-color: #555555;
+}
